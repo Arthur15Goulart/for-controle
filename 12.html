@@ -1,0 +1,22 @@
+<script>
+    /*
+    PROBLEMA: Investimentos
+    Joãozinho investiu R$ 1.000,00 e o investimento renderá 2% por dia útil. Quantos dias demorará para que Joãozinho consiga o total de R$ 2.000,00.
+    */
+
+    //ENTRADA
+    let investimentoInicial = 1000;
+    let valorFinal = 2000;
+    let taxaDeCrescimento = 0.02;
+    let dias = 0;
+
+    //PROCESSAMENTO
+    while (investimentoInicial < valorFinal) {
+        investimentoInicial += investimentoInicial * taxaDeCrescimento;
+        dias++;
+    }
+
+    //SAÍDA
+    document.write(dias);
+    document.write("Valor final do investimento: R$ " + investimentoInicial.toFixed(2));
+</script>

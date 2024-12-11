@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+    let candidato1 = prompt("Informe o nome do primeiro candidato:");
+    let candidato2 = prompt("Informe o nome do segundo candidato:");
+    let candidato3 = prompt("Informe o nome do terceiro candidato:");
+
+    let totalAlunos = parseInt(prompt("Informe a quantidade de alunos votantes:"));
+
+    let votosCandidato1 = 0;
+    let votosCandidato2 = 0;
+    let votosCandidato3 = 0;
+
+    //PROCESSAMENTO
+    for (let i = 1; i <= totalAlunos; i++) {
+        let voto = prompt(`Aluno ${i}, vote no candidato (1 - ${candidato1}, 2 - ${candidato2}, 3 - ${candidato3}):`);
+        if (voto == 1) {
+            votosCandidato1++;
+        } else if (voto == 2) {
+            votosCandidato2++;
+        } else if (voto == 3) {
+            votosCandidato3++;
+        } else {
+            alert("Voto inválido!");
+        }
+    }
+
+    //SAÍDA
+    let porcentagemCandidato1 = ((votosCandidato1 / totalAlunos) * 100).toFixed(2);
+    let porcentagemCandidato2 = ((votosCandidato2 / totalAlunos) * 100).toFixed(2);
+    let porcentagemCandidato3 = ((votosCandidato3 / totalAlunos) * 100).toFixed(2);
+
+    document.write(`${candidato1}: ${votosCandidato1} votos (${porcentagemCandidato1}%)<br>`);
+    document.write(`${candidato2}: ${votosCandidato2} votos (${porcentagemCandidato2}%)<br>`);
+    document.write(`${candidato3}: ${votosCandidato3} votos (${porcentagemCandidato3}%)<br>`);
+</script>

@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Faça um programa que leia 5 números e informe a soma e média dos números.
+    */
+
+    //ENTRADA
+    let soma = 0;
+    let quantidade = 5;
+
+    for (let i = 1; i <= quantidade; i++) {
+        let numero = parseFloat(prompt("Informe o " + i + "º número:"));
+        soma += numero;
+    }
+
+    let media = soma / quantidade;
+
+    //SAÍDA
+    document.write(soma);
+    document.write(media.toFixed(2));
+</script>
